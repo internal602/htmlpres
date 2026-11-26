@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10151d">
+    <meta
+      name="description"
+      content="Prezentacja technologiczna porównująca Django i Laravel: historię, architekturę, funkcje, kod i zastosowania."
+    >
+    <title>Django vs Laravel — porównanie frameworków</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="presentation" aria-label="Prezentacja Django vs Laravel">
+      <header class="topbar">
+        <span class="deck-label">DJANGO VS LARAVEL <span class="label-dot" aria-hidden="true"></span> PORÓWNANIE FRAMEWORKÓW</span>
+      </header>
+
+      
+      <div class="slide-stage" aria-live="polite">
+        
+        <section class="slide slide-framework is-active" aria-roledescription="slajd" aria-label="Slajd 1 z 18">
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> PODSTAWY</p>
+            <h1>Czym jest framework<span class="title-mark">?</span></h1>
+          </div>
+
+          <div class="framework-layout">
+            <div class="framework-copy">
+              <p class="hero-statement">Gotowy fundament<br>do tworzenia aplikacji<span class="title-mark">.</span></p>
+              <p class="body-copy">
+                Framework to zestaw gotowych narzędzi, bibliotek i zasad, który ułatwia programistom tworzenie aplikacji.
+                Zamiast pisać wszystko od podstaw, programista korzysta z przygotowanych rozwiązań, dzięki czemu może
+                szybciej rozwijać aplikację.
+              </p>
+
+              <div class="benefits" aria-label="Najważniejsze korzyści">
+                <div class="benefit">
+                  <span class="benefit-number">01</span>
+                  <span>Szybsze tworzenie<br>aplikacji</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-number">02</span>
+                  <span>Uporządkowana<br>struktura projektu</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-number">03</span>
+                  <span>Gotowe mechanizmy<br>i funkcje</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="framework-visual" aria-label="Schemat działania frameworka w aplikacji internetowej">
+              <div class="visual-caption">
+                <span class="caption-dot" aria-hidden="true"></span>
+                JAK TO DZIAŁA
+              </div>
+              <div class="flow">
+                <div class="flow-node app-node">
+                  <span class="node-icon app-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="M3 9h18M7 6.5h.01M10 6.5h.01" />
+                    </svg>
+                  </span>
+                  <span class="node-label">APLIKACJA<br>INTERNETOWA</span>
+                </div>
+                <span class="flow-connector" aria-hidden="true"><span></span></span>
+                <div class="flow-node framework-node">
+                  <span class="node-icon framework-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" />
+                      <path d="m4.5 7.8 7.5 4.3 7.5-4.3M12 12v8.5" />
+                    </svg>
+                  </span>
+                  <span class="node-label">FRAMEWORK</span>
+                </div>
+                <span class="flow-connector" aria-hidden="true"><span></span></span>
+                <div class="flow-outputs">
+                  <div class="output-node">
+                    <span class="output-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M5 21v-2a7 7 0 0 1 14 0v2" /></svg>
+                    </span>
+                    <span>LOGOWANIE</span>
+                  </div>
+                  <div class="output-node">
+                    <span class="output-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg>
+                    </span>
+                    <span>BAZA DANYCH</span>
+                  </div>
+                  <div class="output-node">
+                    <span class="output-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="m4 7 8-4 8 4-8 4-8-4Z" /><path d="m4 12 8 4 8-4M4 17l8 4 8-4" /></svg>
+                    </span>
+                    <span>OBSŁUGA<br>PRODUKTÓW</span>
+                  </div>
+                </div>
+              </div>
+              <p class="diagram-note">Gotowe narzędzia wspierają programistę — aplikacja nadal powstaje jego pracą.</p>
+              <div class="example-card">
+                <span class="example-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 8H6" /><circle cx="10" cy="21" r="1" /><circle cx="18" cy="21" r="1" /></svg>
+                </span>
+                <p><span class="example-label">PRZYKŁAD · SKLEP INTERNETOWY</span>Wyobraź sobie, że tworzysz sklep internetowy. Potrzebujesz logowania użytkowników, obsługi produktów i połączenia z bazą danych. Framework udostępnia gotowe mechanizmy, które pomagają zrealizować te zadania.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide slide-languages" aria-roledescription="slajd" aria-label="Slajd 2 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> PODSTAWY</p>
+            <h1>Framework a język programowania</h1>
+          </div>
+
+          <div class="language-content">
+            <p class="language-intro">
+              Język programowania pozwala nam pisać kod i tworzyć logikę aplikacji, natomiast framework dostarcza
+              gotową strukturę oraz narzędzia ułatwiające jej budowanie.
+            </p>
+
+            <div class="comparison-grid">
+              <article class="comparison-card django-card">
+                <div class="card-topline">
+                  <span class="card-index">01 / EKOSYSTEM PYTHONA</span>
+                  <span class="accent-chip"><span class="chip-dot" aria-hidden="true"></span> DJANGO</span>
+                </div>
+                <div class="comparison-flow" aria-label="Python prowadzi do Django">
+                  <div class="tech-block">
+                    <span class="tech-symbol python-symbol" aria-hidden="true">
+                      <svg viewBox="0 0 32 32">
+                        <path d="M15.9 3c-6.7 0-6.3 2.9-6.3 2.9v3h6.4v.9H7.1S3 9.3 3 16.1s3.6 6.6 3.6 6.6h2.1v-3.1s-.1-3.6 3.5-3.6h6s3.4.1 3.4-3.3V6.4S22.1 3 15.9 3Zm-3.5 2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z" />
+                        <path d="M16.1 29c6.7 0 6.3-2.9 6.3-2.9v-3H16v-.9h8.9s4.1.5 4.1-6.3-3.6-6.6-3.6-6.6h-2.1v3.1s.1 3.6-3.5 3.6h-6s-3.4-.1-3.4 3.3v6.3S9.9 29 16.1 29Zm3.5-2a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4Z" />
+                      </svg>
+                    </span>
+                    <span class="tech-name">Python</span>
+                    <span class="tech-type">JĘZYK PROGRAMOWANIA</span>
+                  </div>
+                  <span class="relation-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 32 16"><path d="M1 8h28m-6-6 6 6-6 6" /></svg>
+                  </span>
+                  <div class="tech-block framework-tech">
+                    <span class="tech-symbol django-symbol" aria-hidden="true">
+                      <svg viewBox="0 0 32 32"><path d="M9 5h5v17.2c0 2.7-.2 4.8-.7 6.4l-4.6-.8c.3-1.3.4-2.8.4-5V5Zm10 0h5v16.1c0 3.6-1.3 6.1-3.6 7.5-1.5.9-3.6 1.4-6.2 1.4v-4.4c3.4 0 4.8-1 4.8-4.5V5Z" /></svg>
+                    </span>
+                    <span class="tech-name">Django</span>
+                    <span class="tech-type">FRAMEWORK</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="comparison-card laravel-card">
+                <div class="card-topline">
+                  <span class="card-index">02 / EKOSYSTEMU PHP</span>
+                  <span class="accent-chip"><span class="chip-dot" aria-hidden="true"></span> LARAVEL</span>
+                </div>
+                <div class="comparison-flow" aria-label="PHP prowadzi do Laravel">
+                  <div class="tech-block">
+                    <span class="tech-symbol php-symbol" aria-hidden="true">
+                      <svg viewBox="0 0 40 24"><path d="M2 16c0-5.8 5-10.5 11.2-10.5S24.4 10.2 24.4 16c0 1-.2 1.9-.5 2.8h-4.6l1-5.5c.3-1.8-.6-2.7-2.4-2.7-1.9 0-3.4 1.2-3.8 3.2l-.9 5H8.6l.9-5.3c.3-1.7-.3-2.4-1.7-2.4-1.5 0-2.5.9-2.8 2.4l-.9 5.3H.3L2 16Zm24.4 2.8.9-5.4c.3-1.8-.6-2.7-2.4-2.7-1.9 0-3.4 1.2-3.8 3.2l-.9 5h-4.6l1-5.3c.3-1.7-.3-2.4-1.7-2.4-1.5 0-2.5.9-2.8 2.4l-.9 5.3H7l1.7-9.2h4.4l-.3 1.6c1-1.2 2.5-1.9 4.3-1.9 2 0 3.1.8 3.4 2.2 1.1-1.4 2.7-2.2 4.7-2.2 3.4 0 4.9 1.9 4.3 5.2l-.8 4.3h-4.3Z" /></svg>
+                    </span>
+                    <span class="tech-name">PHP</span>
+                    <span class="tech-type">JĘZYK PROGRAMOWANIA</span>
+                  </div>
+                  <span class="relation-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 32 16"><path d="M1 8h28m-6-6 6 6-6 6" /></svg>
+                  </span>
+                  <div class="tech-block framework-tech">
+                    <span class="tech-symbol laravel-symbol" aria-hidden="true">
+                      <svg viewBox="0 0 32 32"><path d="M7 5v16l7 4 7-4v-8l-7-4-7 4m7-4v8m0 0 7 4m-7-4-7-4m14 4 7-4m-7 12 7-4V9m-7 12v-8l7-4M7 5l7-4 7 4v8" /></svg>
+                    </span>
+                    <span class="tech-name">Laravel</span>
+                    <span class="tech-type">FRAMEWORK</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="legend">
+              <span class="legend-item"><span class="legend-mark language-mark" aria-hidden="true"></span> Python i PHP — języki programowania</span>
+              <span class="legend-separator" aria-hidden="true"></span>
+              <span class="legend-item"><span class="legend-mark framework-mark" aria-hidden="true"></span> Django i Laravel — frameworki</span>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info history-slide accent-django" aria-roledescription="slajd" aria-label="Slajd 3 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> HISTORIA · DJANGO</p>
+            <h1>Z newsroomu do <span class="accent-text">open source</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Django wyrósł z potrzeby szybkiego budowania rozbudowanych serwisów informacyjnych.</p>
+            <div class="timeline django-timeline">
+              <article class="timeline-item">
+                <span class="timeline-date">2003</span>
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div class="timeline-card">
+                  <span class="timeline-kicker">LAWRENCE, KANSAS</span>
+                  <h2>Praca pod presją newsroomu</h2>
+                  <p>Zespół World Online, związany z gazetą <em>Lawrence Journal-World</em>, rozwija serwisy takie jak Lawrence.com. Adrian Holovaty i Simon Willison zaczynają używać Pythona i wyodrębniać wspólne narzędzia webowe.</p>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <span class="timeline-date">2003–05</span>
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div class="timeline-card">
+                  <span class="timeline-kicker">ROZWÓJ WEWNĘTRZNY</span>
+                  <h2>Framework dojrzewa w praktyce</h2>
+                  <p>Narzędzia są rozwijane przy kolejnych projektach redakcji. Do wczesnego zespołu współtwórców dołącza Jacob Kaplan-Moss.</p>
+                  <div class="person-tags"><span>Adrian Holovaty</span><span>Simon Willison</span><span>Jacob Kaplan-Moss</span></div>
+                </div>
+              </article>
+              <article class="timeline-item">
+                <span class="timeline-date">2005</span>
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div class="timeline-card">
+                  <span class="timeline-kicker">LATO 2005</span>
+                  <h2>Publikacja jako open source</h2>
+                  <p>World Online udostępnia Django społeczności. Projekt rozwija się już jako wspólne, otwarte narzędzie.</p>
+                </div>
+              </article>
+            </div>
+            <div class="history-note"><span class="note-icon" aria-hidden="true">♪</span><span><strong>Skąd nazwa?</strong> Od Django Reinhardta — gitarzysty jazzowego, którego muzyka inspirowała nazwę frameworka.</span></div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info history-slide accent-laravel" aria-roledescription="slajd" aria-label="Slajd 4 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> HISTORIA · LARAVEL</p>
+            <h1>PHP z naciskiem na <span class="accent-text">komfort pracy</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Laravel powstał jako przemyślana odpowiedź na typowe, powtarzalne zadania w aplikacjach webowych.</p>
+            <div class="laravel-history-grid">
+              <div class="laravel-timeline">
+                <article class="timeline-item">
+                  <span class="timeline-date">2011</span>
+                  <span class="timeline-marker" aria-hidden="true"></span>
+                  <div class="timeline-card">
+                    <span class="timeline-kicker">2011 · PIERWSZE PUBLICZNE WYDANIE</span>
+                    <h2>Laravel trafia do programistów PHP</h2>
+                    <p>Laravel 1 beta zostaje wydany w czerwcu jako odpowiedź na brak wygodnego uwierzytelniania i routingu opartego na closures w ówczesnym CodeIgniterze.</p>
+                  </div>
+                </article>
+                <article class="timeline-item">
+                  <span class="timeline-date">2011–2012</span>
+                  <span class="timeline-marker" aria-hidden="true"></span>
+                  <div class="timeline-card">
+                    <span class="timeline-kicker">2011–2012 · LARAVEL 2 I 3</span>
+                    <h2>Od MVC do Artisan</h2>
+                    <p>Laravel 2 wprowadza kontrolery i Blade; Laravel 3 — Artisan oraz migracje baz danych.</p>
+                  </div>
+                </article>
+                <article class="timeline-item">
+                  <span class="timeline-date">2013</span>
+                  <span class="timeline-marker" aria-hidden="true"></span>
+                  <div class="timeline-card">
+                    <span class="timeline-kicker">2013 · LARAVEL 4</span>
+                    <h2>Framework przechodzi na Composer</h2>
+                    <p>Laravel 4 przebudowuje framework jako zestaw pakietów instalowanych przez Composer.</p>
+                  </div>
+                </article>
+              </div>
+              <aside class="origin-card">
+                <div class="origin-mark" aria-hidden="true"><span>L</span><i></i></div>
+                <p class="origin-kicker">TWÓRCA</p>
+                <h2>Taylor<br>Otwell</h2>
+                <p>Laravel od początku stawiał na ergonomię PHP i spójny zestaw rozwiązań dla typowych zadań webowych.</p>
+                <span class="origin-caption">PHP · OPEN SOURCE · WEB</span>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info intro-framework accent-django" aria-roledescription="slajd" aria-label="Slajd 5 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> DJANGO · W PIGUŁCE</p>
+            <h1>Pełny zestaw narzędzi <span class="accent-text">w Pythonie</span></h1>
+          </div>
+          <div class="info-body intro-grid">
+            <div class="intro-copy">
+              <p class="slide-lead">Django to wysokopoziomowy framework webowy, który pomaga budować i utrzymywać aplikacje po stronie serwera.</p>
+              <p class="body-copy">Dostarcza spójne elementy do routingu, pracy z danymi, renderowania HTML, panelu administracyjnego i bezpieczeństwa. Zespół może skupić się na regułach biznesowych zamiast składać podstawy aplikacji od zera.</p>
+              <div class="fit-pills"><span>Python</span><span>Web apps</span><span>Server-side</span><span>Open source</span></div>
+            </div>
+            <div class="usecase-grid">
+              <article class="usecase-card"><span class="usecase-index">01</span><h2>Portale i CMS</h2><p>Treści, redakcyjne workflow i uprawnienia.</p><span class="usecase-icon" aria-hidden="true">▤</span></article>
+              <article class="usecase-card"><span class="usecase-index">02</span><h2>Narzędzia wewnętrzne</h2><p>Panel administracyjny ułatwia zarządzanie danymi.</p><span class="usecase-icon" aria-hidden="true">⌘</span></article>
+              <article class="usecase-card"><span class="usecase-index">03</span><h2>Serwisy danych</h2><p>Modele i ORM porządkują złożone relacje.</p><span class="usecase-icon" aria-hidden="true">◫</span></article>
+              <article class="usecase-card"><span class="usecase-index">04</span><h2>API i produkty webowe</h2><p>Widoki mogą zwracać HTML lub dane dla klientów.</p><span class="usecase-icon" aria-hidden="true">{ }</span></article>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info request-slide accent-django" aria-roledescription="slajd" aria-label="Slajd 6 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> DJANGO · CYKL ŻĄDANIA</p>
+            <h1>Jak Django obsługuje <span class="accent-text">żądanie?</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Przykład: użytkownik otwiera stronę listy produktów.</p>
+            <div class="request-flow django-request" aria-label="Przepływ żądania w Django">
+              <article class="request-step"><span class="step-number">01</span><span class="step-icon">↗</span><h2>Przeglądarka</h2><p><code>GET /products/</code></p><span class="step-caption">ŻĄDANIE HTTP</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">02</span><span class="step-icon">⌕</span><h2>URLconf</h2><p>Dopasowuje ścieżkę do właściwego widoku.</p><span class="step-caption">ROUTING</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">03</span><span class="step-icon">ƒ</span><h2>View</h2><p>Koordynuje logikę odpowiedzi.</p><span class="step-caption">LOGIKA</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">04</span><span class="step-icon">▤</span><h2>Model / ORM</h2><p>Pobiera potrzebne rekordy z bazy.</p><span class="step-caption">DANE</span></article>
+            </div>
+            <div class="return-flow">
+              <div class="return-label"><span>↩</span> ODPOWIEDŹ WRACA DO PRZEGLĄDARKI</div>
+              <div class="return-track"><span class="return-node">QuerySet / dane</span><span class="return-connector"></span><span class="return-node">Template renderuje HTML</span><span class="return-connector"></span><span class="return-node return-result">HttpResponse</span></div>
+            </div>
+            <p class="diagram-footnote">Widok jest punktem łączącym logikę i dane; template opisuje prezentację. Django wykonuje routing i obsługę żądania.</p>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info toolkit-slide accent-django" aria-roledescription="slajd" aria-label="Slajd 7 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> DJANGO · KLOCKI APLIKACJI</p>
+            <h1>Co dostajemy <span class="accent-text">w zestawie?</span></h1>
+          </div>
+          <div class="info-body toolkit-grid">
+            <article class="tool-card"><span class="tool-symbol">DB</span><div><h2>Model + Django ORM</h2><p>Opisuje dane jako klasy Pythona. Zapytania i relacje można budować bez ręcznego składania SQL.</p></div><span class="tool-tag">DANE</span></article>
+            <article class="tool-card"><span class="tool-symbol">&lt;/&gt;</span><div><h2>Django Templates</h2><p>Łączy HTML z danymi widoku; autoescaping pomaga bezpiecznie wyświetlać niezaufane wartości.</p></div><span class="tool-tag">WIDOK</span></article>
+            <article class="tool-card"><span class="tool-symbol">↗</span><div><h2>URL dispatcher</h2><p>Czytelne wzorce URL kierują żądanie do odpowiedniego widoku i mogą przekazywać parametry.</p></div><span class="tool-tag">ROUTING</span></article>
+            <article class="tool-card"><span class="tool-symbol">▦</span><div><h2>Admin site</h2><p>Na podstawie modeli tworzy panel do zarządzania treścią i rekordami przez uprawnionych użytkowników.</p></div><span class="tool-tag">ZARZĄDZANIE</span></article>
+            <article class="tool-card"><span class="tool-symbol">✓</span><div><h2>Mechanizmy bezpieczeństwa</h2><p>Ochrona m.in. przed CSRF i typowymi błędami XSS/SQL injection — skuteczność zależy też od poprawnej konfiguracji.</p></div><span class="tool-tag">SECURITY</span></article>
+            <article class="tool-card tool-note"><span class="tool-symbol">i</span><div><h2>Admin to narzędzie wewnętrzne</h2><p>Dokumentacja zaleca go do zarządzania serwisem, nie jako gotowy frontend dla użytkowników.</p></div><span class="tool-tag">DOBRA PRAKTYKA</span></article>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info intro-framework accent-laravel" aria-roledescription="slajd" aria-label="Slajd 8 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> LARAVEL · W PIGUŁCE</p>
+            <h1>Nowoczesne aplikacje <span class="accent-text">w PHP</span></h1>
+          </div>
+          <div class="info-body intro-grid">
+            <div class="intro-copy">
+              <p class="slide-lead">Laravel to framework webowy PHP, który zapewnia konwencje i zintegrowane narzędzia do tworzenia aplikacji.</p>
+              <p class="body-copy">Routing, middleware, Eloquent, migracje, Blade i uwierzytelnianie tworzą zestaw elementów, które można łączyć w aplikacje pełnostackowe lub backendy API.</p>
+              <div class="fit-pills"><span>PHP</span><span>Composer</span><span>Web apps</span><span>Open source</span></div>
+            </div>
+            <div class="usecase-grid">
+              <article class="usecase-card"><span class="usecase-index">01</span><h2>Aplikacje biznesowe</h2><p>Konwencje i gotowe komponenty dla typowych modułów.</p><span class="usecase-icon" aria-hidden="true">▦</span></article>
+              <article class="usecase-card"><span class="usecase-index">02</span><h2>Sklepy i serwisy</h2><p>Modele, walidacja i routing porządkują funkcje domenowe.</p><span class="usecase-icon" aria-hidden="true">⌑</span></article>
+              <article class="usecase-card"><span class="usecase-index">03</span><h2>Backendy API</h2><p>Trasy i middleware mogą obsługiwać klientów mobilnych i SPA.</p><span class="usecase-icon" aria-hidden="true">{ }</span></article>
+              <article class="usecase-card"><span class="usecase-index">04</span><h2>Produkty full-stack</h2><p>Blade lub starter kity pomagają tworzyć interfejsy webowe.</p><span class="usecase-icon" aria-hidden="true">◫</span></article>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info request-slide accent-laravel" aria-roledescription="slajd" aria-label="Slajd 9 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> LARAVEL · CYKL ŻĄDANIA</p>
+            <h1>Od route do <span class="accent-text">odpowiedzi</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Przykład: użytkownik otwiera listę produktów — route wskazuje kod obsługujący żądanie.</p>
+            <div class="request-flow laravel-request" aria-label="Przepływ żądania w Laravel">
+              <article class="request-step"><span class="step-number">01</span><span class="step-icon">↗</span><h2>Przeglądarka</h2><p><code>GET /products</code></p><span class="step-caption">ŻĄDANIE HTTP</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">02</span><span class="step-icon">⌕</span><h2>Route + middleware</h2><p>Dopasowanie, filtry i kontrola dostępu.</p><span class="step-caption">WEJŚCIE</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">03</span><span class="step-icon">ƒ</span><h2>Controller</h2><p>Przygotowuje odpowiedź dla akcji.</p><span class="step-caption">LOGIKA</span></article>
+              <span class="request-arrow" aria-hidden="true">→</span>
+              <article class="request-step"><span class="step-number">04</span><span class="step-icon">DB</span><h2>Eloquent</h2><p>Odczytuje dane przez model.</p><span class="step-caption">DANE</span></article>
+            </div>
+            <div class="return-flow laravel-return">
+              <div class="return-label"><span>↩</span> ODPOWIEDŹ WRACA DO PRZEGLĄDARKI</div>
+              <div class="return-track"><span class="return-node">Model / kolekcja</span><span class="return-connector"></span><span class="return-node">Blade renderuje widok</span><span class="return-connector"></span><span class="return-node return-result">Response</span></div>
+            </div>
+            <p class="diagram-footnote">W przypadku API controller może zwrócić JSON zamiast renderować widok Blade.</p>
+          </div>
+        </section>
+
+        <section class="slide slide-info toolkit-slide accent-laravel" aria-roledescription="slajd" aria-label="Slajd 10 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> LARAVEL · KLOCKI APLIKACJI</p>
+            <h1>Jak współpracują <span class="accent-text">narzędzia?</span></h1>
+          </div>
+          <div class="info-body toolkit-grid">
+            <article class="tool-card"><span class="tool-symbol">MVC</span><div><h2>Model · View · Controller</h2><p>Model pracuje z danymi, view odpowiada za prezentację, a controller koordynuje akcję żądania.</p></div><span class="tool-tag">STRUKTURA</span></article>
+            <article class="tool-card"><span class="tool-symbol">DB</span><div><h2>Eloquent ORM</h2><p>Model reprezentuje rekordy i relacje; fluent API upraszcza pobieranie, zapis i aktualizację danych.</p></div><span class="tool-tag">DANE</span></article>
+            <article class="tool-card"><span class="tool-symbol">&lt;/&gt;</span><div><h2>Blade</h2><p>Szablony z dyrektywami i layoutami generują HTML; domyślne escapowanie ogranicza ryzyko XSS.</p></div><span class="tool-tag">WIDOK</span></article>
+            <article class="tool-card"><span class="tool-symbol">↻</span><div><h2>Migracje</h2><p>Wersjonują schemat bazy w kodzie, dzięki czemu zespół może odtwarzać zmiany na środowiskach.</p></div><span class="tool-tag">SCHEMAT DB</span></article>
+            <article class="tool-card"><span class="tool-symbol">◎</span><div><h2>Authentication + authorization</h2><p>Guards/providers obsługują logowanie; gates i policies opisują, kto może wykonać daną akcję.</p></div><span class="tool-tag">DOSTĘP</span></article>
+            <article class="tool-card tool-note"><span class="tool-symbol">⌘</span><div><h2>Artisan + ekosystem</h2><p>CLI generuje elementy projektu; dodatkowe pakiety można dobrać do konkretnego wdrożenia.</p></div><span class="tool-tag">NARZĘDZIA</span></article>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info comparison-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 11 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> PORÓWNANIE · FUNDAMENTY</p>
+            <h1>Dwa ekosystemy, <span class="dual-text">podobne zadania</span></h1>
+          </div>
+          <div class="info-body">
+            <div class="comparison-table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th scope="col">OBSZAR</th><th scope="col"><span class="django-text">DJANGO</span></th><th scope="col"><span class="laravel-text">LARAVEL</span></th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Język</th><td>Python — czytelna składnia i szerokie zastosowania poza webem.</td><td>PHP — język szeroko używany w backendzie webowym.</td></tr>
+                  <tr><th scope="row">Architektura</th><td>MVT: Model, View, Template; URL dispatcher kieruje do view.</td><td>MVC: Model, View, Controller; route kieruje do closure lub controller.</td></tr>
+                  <tr><th scope="row">Struktura</th><td>Projekt dzieli się na aplikacje domenowe; konfiguracja jest jawna.</td><td>Konwencjonalne katalogi <code>app/</code>, <code>routes/</code>, <code>resources/</code>.</td></tr>
+                  <tr><th scope="row">Routing</th><td>Wzorce URL w URLconf mapują ścieżkę na view.</td><td>Trasy definiowane m.in. w <code>routes/web.php</code>, z middleware i route model binding.</td></tr>
+                  <tr><th scope="row">Start</th><td>Przyjazny osobom znającym Pythona; wiele funkcji jest w core.</td><td>Naturalny dla osób znających PHP; konwencje i Artisan przyspieszają typowe zadania.</td></tr>
+                  <tr><th scope="row">Kiedy pasuje?</th><td>Gdy zespół ceni Python, spójny pakiet i szybkie zaplecze treści.</td><td>Gdy zespół pracuje w PHP i chce konwencji oraz zintegrowanego workflow.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note"><span class="note-dot django-dot"></span> Django <span class="note-dot laravel-dot"></span> Laravel <span class="table-note-text">— mapowanie wzorców jest podobne, ale nazwy i podział odpowiedzialności nie są identyczne.</span></p>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info comparison-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 12 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> PORÓWNANIE · FUNKCJE</p>
+            <h1>Różne narzędzia, <span class="dual-text">wspólny cel</span></h1>
+          </div>
+          <div class="info-body">
+            <div class="comparison-table-wrap">
+              <table class="comparison-table compact-table">
+                <thead><tr><th scope="col">OBSZAR</th><th scope="col"><span class="django-text">DJANGO</span></th><th scope="col"><span class="laravel-text">LARAVEL</span></th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Baza danych</th><td>Django ORM: modele, QuerySety i migracje.</td><td>Eloquent: modele, relacje i migracje.</td></tr>
+                  <tr><th scope="row">Szablony</th><td>Django Template Language; separacja prezentacji od logiki widoku.</td><td>Blade; dyrektywy, komponenty i dziedziczenie layoutów.</td></tr>
+                  <tr><th scope="row">Panel admina</th><td>Wbudowany, model-centric panel dla zaufanych redaktorów i operatorów.</td><td>Brak analogicznego panelu w core; można dobrać np. Laravel Nova lub inne narzędzie.</td></tr>
+                  <tr><th scope="row">Bezpieczeństwo</th><td>Ochrony m.in. CSRF, XSS i SQL injection; potrzebna bezpieczna konfiguracja.</td><td>Middleware, CSRF, escapowanie Blade, query binding; odpowiedzialność nadal po stronie aplikacji.</td></tr>
+                  <tr><th scope="row">Ekosystem</th><td>Python Package Index, middleware i integracje; popularne rozszerzenia są niezależnymi pakietami.</td><td>Composer, Artisan i szeroki ekosystem Laravel; część narzędzi jest osobnymi produktami.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="comparison-callout"><span class="callout-mark">≠</span><p>„Wbudowane” nie znaczy „gotowe do każdego przypadku”. Sprawdź wymagania, konfigurację, licencje i utrzymanie wybranych pakietów.</p></div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info code-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 13 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> KOD · ROUTING</p>
+            <h1>Ten sam adres, <span class="dual-text">inne konwencje</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Przykład: przypisz <code>/products/</code> do logiki listy produktów.</p>
+            <div class="code-compare">
+              <article class="code-card code-django">
+                <div class="code-card-header"><span class="code-lang"><i></i> DJANGO · PYTHON</span><span class="code-file">urls.py</span></div>
+                <pre><code><span class="token-muted"># urls.py</span>
+<span class="token-key">from</span> django.urls <span class="token-key">import</span> path
+<span class="token-key">from</span> . <span class="token-key">import</span> views
+
+urlpatterns = [
+    path(
+        <span class="token-string">"products/"</span>,
+        views.product_list,
+        name=<span class="token-string">"products"</span>,
+    ),
+]</code></pre>
+                <p class="code-explanation"><strong>URLconf</strong> łączy wzorzec ścieżki z funkcją view.</p>
+              </article>
+              <article class="code-card code-laravel">
+                <div class="code-card-header"><span class="code-lang"><i></i> LARAVEL · PHP</span><span class="code-file">routes/web.php</span></div>
+                <pre><code><span class="token-key">use</span> Illuminate\Support\Facades\Route;
+<span class="token-key">use</span> App\Http\Controllers\ProductController;
+
+Route::<span class="token-function">get</span>(
+    <span class="token-string">"/products"</span>,
+    [ProductController::<span class="token-key">class</span>, <span class="token-string">"index"</span>]
+);</code></pre>
+                <p class="code-explanation"><strong>Route</strong> dopasowuje metodę HTTP i ścieżkę do akcji kontrolera.</p>
+              </article>
+            </div>
+            <div class="code-takeaway"><span>WSPÓLNY WZORZEC</span><strong>URL → reguła routingu → kod aplikacji</strong><span>inne API, ta sama intencja</span></div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info code-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 14 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> KOD · POBIERANIE DANYCH</p>
+            <h1>Query po aktywne <span class="dual-text">produkty</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Oba ORM-y pozwalają opisać intencję w kodzie zamiast ręcznie składać SQL.</p>
+            <div class="code-compare query-compare">
+              <article class="code-card code-django">
+                <div class="code-card-header"><span class="code-lang"><i></i> DJANGO · VIEW</span><span class="code-file">views.py</span></div>
+                <pre><code><span class="token-key">from</span> django.shortcuts <span class="token-key">import</span> render
+<span class="token-key">from</span> .models <span class="token-key">import</span> Product
+
+<span class="token-key">def</span> <span class="token-function">product_list</span>(request):
+    products = (
+        Product.objects
+        .filter(is_active=<span class="token-bool">True</span>)
+        .order_by(<span class="token-string">"name"</span>)
+    )
+    <span class="token-key">return</span> render(
+        request, <span class="token-string">"products/index.html"</span>,
+        {<span class="token-string">"products"</span>: products}
+    )</code></pre>
+                <p class="code-explanation">QuerySet jest leniwy; dane trafiają do template jako kontekst.</p>
+              </article>
+              <article class="code-card code-laravel">
+                <div class="code-card-header"><span class="code-lang"><i></i> LARAVEL · CONTROLLER</span><span class="code-file">ProductController.php</span></div>
+                <pre><code><span class="token-key">use</span> App\Models\Product;
+
+<span class="token-key">public function</span> <span class="token-function">index</span>()
+{
+    $products = Product::<span class="token-function">query</span>()
+        -><span class="token-function">where</span>(<span class="token-string">"is_active"</span>, <span class="token-bool">true</span>)
+        -><span class="token-function">orderBy</span>(<span class="token-string">"name"</span>)
+        -><span class="token-function">get</span>();
+
+    <span class="token-key">return</span> <span class="token-function">view</span>(
+        <span class="token-string">"products.index"</span>,
+        [<span class="token-string">"products"</span> => $products]
+    );
+}</code></pre>
+                <p class="code-explanation">Eloquent buduje zapytanie dla modelu i przekazuje kolekcję do widoku.</p>
+              </article>
+            </div>
+            <p class="code-footnote">W przykładach zakładamy istniejący model <code>Product</code> z polem <code>is_active</code> i nazwą produktu.</p>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info tradeoffs-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 15 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> ZALETY I OGRANICZENIA</p>
+            <h1>Co zyskujemy, <span class="dual-text">co trzeba rozważyć?</span></h1>
+          </div>
+          <div class="info-body tradeoff-grid">
+            <article class="tradeoff-panel django-panel">
+              <div class="tradeoff-heading"><span class="framework-orb">D</span><div><span class="panel-kicker">PYTHON · MVT</span><h2>Django</h2></div></div>
+              <div class="tradeoff-column">
+                <div><span class="plus-mark">+</span><p>Spójny zestaw funkcji w core; mniej decyzji integracyjnych na starcie.</p></div>
+                <div><span class="plus-mark">+</span><p>Admin, ORM i migracje pomagają szybko uruchomić zaplecze danych.</p></div>
+                <div><span class="minus-mark">−</span><p>Rozbudowany zestaw może być większy niż potrzeby małej usługi.</p></div>
+                <div><span class="minus-mark">−</span><p>Warto poznać konwencje MVT i podział na aplikacje Django.</p></div>
+              </div>
+            </article>
+            <article class="tradeoff-panel laravel-panel">
+              <div class="tradeoff-heading"><span class="framework-orb">L</span><div><span class="panel-kicker">PHP · MVC</span><h2>Laravel</h2></div></div>
+              <div class="tradeoff-column">
+                <div><span class="plus-mark">+</span><p>Konwencje, Artisan i spójne API upraszczają typowy workflow PHP.</p></div>
+                <div><span class="plus-mark">+</span><p>Szeroki ekosystem pomaga dobrać narzędzia do rosnącej aplikacji.</p></div>
+                <div><span class="minus-mark">−</span><p>Dobór dodatkowych pakietów zwiększa liczbę zależności do utrzymania.</p></div>
+                <div><span class="minus-mark">−</span><p>Panel administracyjny wymaga osobnego narzędzia lub własnej implementacji.</p></div>
+              </div>
+            </article>
+          </div>
+          <p class="balanced-note">To kompromisy zależne od projektu i zespołu — nie uniwersalny ranking.</p>
+        </section>
+
+
+
+
+        <section class="slide slide-info decision-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 16 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> DOBÓR DO POTRZEB</p>
+            <h1>Najpierw problem, potem <span class="dual-text">framework</span></h1>
+          </div>
+          <div class="info-body">
+            <p class="slide-lead">Pytanie nie brzmi „który jest najlepszy?”, lecz „który lepiej pasuje do zespołu i ograniczeń?”</p>
+            <div class="decision-grid">
+              <article class="decision-card django-decision"><span class="decision-label">ROZWAŻ DJANGO, GDY…</span><div class="decision-list"><p><span>01</span> zespół pracuje w Pythonie lub chce spójnego backendu Python</p><p><span>02</span> panel redakcyjny / administracyjny ma dużą wartość</p><p><span>03</span> aplikacja ma wyraźne modele danych i potrzebuje szybkiego zaplecza</p></div><div class="decision-stack"><span>Python</span><span>Django ORM</span><span>Admin</span></div></article>
+              <div class="decision-center"><span>ALBO</span><i></i><strong>zależy<br>od kontekstu</strong><i></i></div>
+              <article class="decision-card laravel-decision"><span class="decision-label">ROZWAŻ LARAVEL, GDY…</span><div class="decision-list"><p><span>01</span> zespół pracuje w PHP i zna jego narzędzia</p><p><span>02</span> liczy się konwencjonalny full-stack workflow</p><p><span>03</span> potrzebujesz Composer i elementów ekosystemu Laravel</p></div><div class="decision-stack"><span>PHP</span><span>Eloquent</span><span>Artisan</span></div></article>
+            </div>
+            <div class="decision-check"><span>✓</span> Porównaj umiejętności zespołu, wymagania, integracje, hosting, utrzymanie i koszt migracji.</div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info summary-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 17 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> NAJWAŻNIEJSZE WNIOSKI</p>
+            <h1>Framework dopasuj do <span class="dual-text">kontekstu</span></h1>
+          </div>
+          <div class="info-body summary-layout">
+            <div class="summary-statement"><span class="summary-quote">“</span><p>Dwa dojrzałe sposoby na budowanie aplikacji webowych — z różnymi językami, konwencjami i ekosystemami.</p></div>
+            <div class="summary-points">
+              <article><span class="summary-number">01</span><div><h2>Różnią się</h2><p>Python i MVT kontra PHP i MVC; inne API, struktury i zestawy narzędzi.</p></div></article>
+              <article><span class="summary-number">02</span><div><h2>Łączy je cel</h2><p>Routing, modele, widoki, migracje i zabezpieczenia wspierają tworzenie aplikacji webowych.</p></div></article>
+              <article><span class="summary-number">03</span><div><h2>Wybór zależy od</h2><p>Wymagań produktu, doświadczenia zespołu, integracji i długoterminowego utrzymania.</p></div></article>
+            </div>
+            <div class="summary-footer"><span class="summary-color django-text">DJANGO</span><span>nie ma jednego zwycięzcy bez kontekstu</span><span class="summary-color laravel-text">LARAVEL</span></div>
+          </div>
+        </section>
+
+
+
+
+        <section class="slide slide-info sources-slide accent-dual" aria-roledescription="slajd" aria-label="Slajd 18 z 18" aria-hidden="true" inert>
+          <div class="slide-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> ŹRÓDŁA I DALSZA LEKTURA</p>
+            <h1>Wiedza oparta na <span class="dual-text">dokumentacji</span></h1>
+          </div>
+          <div class="info-body source-layout">
+            <p class="slide-lead">Materiały oficjalne frameworków. Historia: dokumentacja Django oraz archiwalne materiały Laravel.</p>
+            <div class="source-columns">
+              <div class="source-group source-django">
+                <h2><span class="source-dot"></span> DJANGO</h2>
+                <a href="https://docs.djangoproject.com/en/6.0/faq/general/" target="_blank" rel="noopener noreferrer"><span>01</span> Historia projektu, nazwa i wyjaśnienie MTV</a>
+                <a href="https://docs.djangoproject.com/en/6.0/topics/db/" target="_blank" rel="noopener noreferrer"><span>02</span> Modele i bazy danych</a>
+                <a href="https://docs.djangoproject.com/en/6.0/topics/http/urls/" target="_blank" rel="noopener noreferrer"><span>03</span> URL dispatcher</a>
+                <a href="https://docs.djangoproject.com/en/6.0/topics/templates/" target="_blank" rel="noopener noreferrer"><span>04</span> Templates</a>
+                <a href="https://docs.djangoproject.com/en/6.0/ref/contrib/admin/" target="_blank" rel="noopener noreferrer"><span>05</span> Django admin</a>
+                <a href="https://docs.djangoproject.com/en/6.0/topics/security/" target="_blank" rel="noopener noreferrer"><span>06</span> Bezpieczeństwo</a>
+              </div>
+              <div class="source-group source-laravel">
+                <h2><span class="source-dot"></span> LARAVEL</h2>
+                <a href="https://maxoffsky.com/code-blog/history-of-laravel-php-framework-eloquence-emerging/" target="_blank" rel="noopener noreferrer"><span>01</span> Historia wydań, Taylor Otwell i geneza</a>
+                <a href="https://laravel.com/docs/4.2/introduction" target="_blank" rel="noopener noreferrer"><span>02</span> Archiwalna filozofia i typowe zadania</a>
+                <a href="https://laravel.com/docs/13.x/installation" target="_blank" rel="noopener noreferrer"><span>03</span> Wprowadzenie i zastosowania</a>
+                <a href="https://laravel.com/docs/13.x/routing" target="_blank" rel="noopener noreferrer"><span>04</span> Routing i middleware</a>
+                <a href="https://laravel.com/docs/13.x/eloquent" target="_blank" rel="noopener noreferrer"><span>05</span> Eloquent ORM</a>
+                <a href="https://laravel.com/docs/13.x/blade" target="_blank" rel="noopener noreferrer"><span>06</span> Szablony Blade</a>
+                <a href="https://laravel.com/docs/13.x/migrations" target="_blank" rel="noopener noreferrer"><span>07</span> Migracje baz danych</a>
+                <a href="https://laravel.com/docs/13.x/authentication" target="_blank" rel="noopener noreferrer"><span>08</span> Uwierzytelnianie</a>
+                <a href="https://laravel.com/docs/13.x/authorization" target="_blank" rel="noopener noreferrer"><span>09</span> Autoryzacja</a>
+              </div>
+            </div>
+            <p class="source-version-note">Dokumentacja online zmienia się wraz z wersjami. Przykłady kodu w prezentacji są krótkimi fragmentami koncepcyjnymi, nie kompletnym projektem.</p>
+          </div>
+        </section>
+        
+      </div>
+
+      <footer class="bottombar">
+        <div class="slide-progress" aria-hidden="true"><span class="progress-fill"></span></div>
+        <nav class="slide-controls" aria-label="Nawigacja po slajdach">
+          <button class="nav-button previous-button" type="button" aria-label="Poprzedni slajd" title="Poprzedni slajd" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <span class="slide-counter" aria-live="polite"><span class="current-slide">01</span><span class="counter-divider">/</span><span class="total-slides">18</span></span>
+          <button class="nav-button next-button" type="button" aria-label="Następny slajd" title="Następny slajd">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+
+
+          </button>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
